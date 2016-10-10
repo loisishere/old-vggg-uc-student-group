@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Video Graphics Game</title>
+  <link href="design.css" rel="stylesheet"/>
+	<link type="text/css" href="Scripts/ui.all.css" rel="stylesheet" />
+<script src="Scripts/jquery.js"></script>
+<script src="Scripts/actions.js"> </script>
+
+  <script type="text/javascript" src="Scripts/ui.core.js"></script>
+  <script type="text/javascript" src="Scripts/ui.dialog.js"></script>
+  <script type="text/javascript" src="Scripts/jquery.bgiframe.js"></script>  <script type="text/javascript" src="Scripts/jquery.cookies.js"></script>
+  <script type="text/javascript">
+  cok='UCs-VG3_site'
+  name = $.cookies.get(cok);
+  if(name ==null || name==''){
+  $(function() {
+			$("#dialog").dialog({
+			bgiframe: true,
+			autoOpen: true,
+			height: 500,
+			width:500,
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$(this).dialog('close');
+					}
+			}
+			});
+	});
+  $.cookies.set(cok,'1in-VG309');
+  $.cookies.setOptions({hoursToLive:48});
+  }else{
+    $(function() {
+			$("#dialog").dialog({
+			autoOpen: false,
+			bgiframe: true,
+			height: 500,
+			width:500,
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$(this).dialog('close');
+					}
+			}
+			});
+	});
+  }
+	$(function() {
+	$('#disclaimer').click(function() {
+			$('#dialog').dialog( 'open');
+		});
+	});/**/
+	</script>
+ 
+
+</head>
+<body>  
+
+<img src="images/background.jpg" id="background"/>
+<div id="dialog" title="UNIVERSITY OF CINCINNATI'S DISCLAIMER"><center><br/><img src="images/UC-logo.gif"/></center><br/><br/>
+ Disclaimer statement:  The views and opinions expressed within this Web site are strictly those of the page authors. The contents of this page and its subpages have not been reviewed or approved by the University of Cincinnati and the University accepts no responsibility for any of its content. Comments regarding the site (these sites) should be sent to the pages’ authors.</div>
+ <div class="scrolling">
+
+ 
+<img id="geek" src="images/PNGs/geek.png" style="left:555px"/>
+  <div id="logo" style="top:230px; margin-left:165px; background:url('images/PNGs/vgggLOGO.png') no-repeat;">
+  <div id="hand"></div>
+<div id="homeBut"><span class="out">HOME</span></div> 
+<a id="memBut" href="members.html"><span class="out">MEMBERS</span></a> 
+<a id="abouBut" href="about.html"><span class="out">ABOUT</span></a> 
+ <a id="contBut" href="contact.html"><span class="out">CONTACT</span></a> 
+ <a id="evenBut" href="event.html"><span class="out">EVENTS</span></a> 
+ <a id="vidBut" href="videos.html"><span class="out">VIDEOS</span></a> 
+
+</div>
+ <div id="content" style="margin-top:55px;margin-left:100px">
+ <div id="welcome"style="margin-top:-57px;">
+  <span class="out">Welcome</span></div>
+
+ 
+The aim of this organization is to educate the members of the group regarding the video game industry, to support members' interest in video games, and to prepare them for professional careers in the field.<br/> <br/>   
+  <button id="disclaimer" class="ui-button ui-state-default ui-corner-all">Disclaimer</button>
+
+</div>
+
+  
+
+</div>
+</body>
+</html>
+ 
